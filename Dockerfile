@@ -20,7 +20,9 @@ RUN git clone "git://git.code.sf.net/p/ats2-lang-contrib/code" ATS2-contrib
 # Setup Env Vars
 ENV PATSHOME="/MyRoot/ATS2"
 ENV PATSCONTRIB="/MyRoot/ATS2-contrib"
-ENV PATH="${PATH}:/MyRoot/ATS2/bin"
+ENV PATSHOMELOCS="./node_modules:./../../node_modules:./../../../../node_modules"
+# No need for 'make install'
+ENV PATH="${PATH}:${PATSHOME}/bin"
 
 # Bootstrap ATS
 RUN (cd ${PATSHOME} && ./configure && make all)
