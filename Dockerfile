@@ -15,7 +15,8 @@ RUN apt-get install -y libgmp-dev libgc-dev libjson-c-dev
 
 # Get the ATS2 and ATS2-contrib
 RUN git clone "git://git.code.sf.net/p/ats2-lang/code" ATS2
-RUN git clone "git://git.code.sf.net/p/ats2-lang-contrib/code" ATS2-contrib
+# RUN git clone "git://git.code.sf.net/p/ats2-lang-contrib/code" ATS2-contrib
+RUN git clone "https://github.com/githwxi/ATS-Postiats-contrib.git" ATS2-contrib
 
 # Setup Env Vars
 ENV PATSHOME="/MyRoot/ATS2"
