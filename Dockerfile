@@ -21,7 +21,7 @@ RUN git clone "https://github.com/githwxi/ATS-Postiats-contrib.git" ATS2-contrib
 # Setup Env Vars
 ENV PATSHOME="/MyRoot/ATS2"
 ENV PATSCONTRIB="/MyRoot/ATS2-contrib"
-ENV PATSHOMELOCS="./node_modules:./../../node_modules:./../../../../node_modules"
+ENV PATSHOMELOCS="./node_modules:./../node_modules:./../../node_modules:./../../../node_modules"
 # No need for 'make install'
 ENV PATH="${PATH}:${PATSHOME}/bin"
 
